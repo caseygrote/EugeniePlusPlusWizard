@@ -3,8 +3,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:s="http://schemas.microsoft.com/surface/2008"
     Title="EugeniePlusPlusWizard" mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-                 d:DesignHeight="1080" d:DesignWidth="1920" SizeToContent="WidthAndHeight">
+                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" Background="#E6000000" Height="1080" Width="1920">
   <Grid Background="Navy">
         <Grid.RowDefinitions>
             <RowDefinition Height="67*" />
@@ -13,15 +12,27 @@
         </Grid.RowDefinitions>
         <Grid Grid.Row="1" Background="#FFDBDBFF" HorizontalAlignment="Left" Height="Auto" Name="search" Width="253" Margin="12,0,0,0">
             <Label Background="White" Content="Search" Height="54" HorizontalAlignment="Left" Margin="6,6,0,0" Name="label1" VerticalAlignment="Top" Width="241" Foreground="Navy" FontSize="30" />
+            <ListBox Height="856" HorizontalAlignment="Left" Margin="6,66,0,0" Name="listBox1" VerticalAlignment="Top" Width="241" Background="#6CFFFFFF" />
         </Grid>
-        <Grid Grid.Row="1" Background="#FFDBDBFF" HorizontalAlignment="Left" Height="Auto" Name="ruledrop" Width="965" Margin="291,0,0,0">
+        <Grid Grid.Row="1" Background="#FFDBDBFF" HorizontalAlignment="Left" Height="Auto" Name="ruledrop" Width="965" Margin="291,0,0,0" PreviewTouchDown="ruledrop_PreviewTouchDown">
             <Label  Content="Rules" FontSize="30" Foreground="Navy" Height="54" HorizontalAlignment="Left" Margin="10,10,0,0" Name="label2" VerticalAlignment="Top" Width="241" />
+            <Label  Content="Rule Added" FontSize="60"  Height="110" HorizontalAlignment="Left" Margin="10,66,0,0" Name="RuleAddedPulsar" Foreground="#00000000"  VerticalAlignment="Top" Width="949" />
         </Grid>
         <Grid Grid.Row="1" Background="#FFDBDBFF" HorizontalAlignment="Left" Height="Auto" Name="results" Width="624" Margin="1262,0,0,0">
             <Label Content="Results" FontSize="30" Foreground="Navy" Height="54" HorizontalAlignment="Left" Margin="10,10,0,0" Name="label3" VerticalAlignment="Top" Width="241" />
 
-            <Button Content="Clear" Height="50" HorizontalAlignment="Left" Margin="377,10,0,0" Name="button2" VerticalAlignment="Top" Width="241" FontSize="30" Foreground="Navy" />
-            <Button Content="Generate Results" Height="50" HorizontalAlignment="Left" Margin="130,10,0,0" Name="button1" VerticalAlignment="Top" Width="241" FontSize="30" Foreground="Navy" />
+            <Button Content="Clear" Height="50" HorizontalAlignment="Left" Margin="377,10,0,0" Name="ClearResults" VerticalAlignment="Top" Width="241" FontSize="30" Foreground="Navy" 
+                    PreviewTouchDown="ClearResults_PreviewTouchDown"/>
+            <Button Content="Generate Results" Height="50" HorizontalAlignment="Left" Margin="130,10,0,0"  Name="generateResults" VerticalAlignment="Top" Width="241" FontSize="30" Foreground="Navy" 
+                    PreviewTouchDown="generateResults_PreviewTouchDown"/>
+            <ListBox Visibility="Hidden" Background="#6CFFFFFF" Height="856" HorizontalAlignment="Left" Margin="10,66,0,0" Name="ResultBox1" VerticalAlignment="Top" Width="608">
+                <ListBoxItem HorizontalAlignment="Center" Height="200">
+                    <Image Source="/EugeniePlusPlusWizard;component/Resources/InverterResults/inverter1.png"></Image>
+                </ListBoxItem>
+                <ListBoxItem HorizontalAlignment="Center" Height="200">
+                    <Image Source="/EugeniePlusPlusWizard;component/Resources/InverterResults/inverter2.png"></Image>
+                </ListBoxItem>
+            </ListBox>
         </Grid>
         <Label Content="Eugenie++" Height="57" HorizontalAlignment="Left" Margin="10,10,0,0" Name="label4" VerticalAlignment="Top" Width="1888" Foreground="White" FontSize="30" />
     </Grid>

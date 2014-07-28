@@ -15,6 +15,7 @@ using Microsoft.Surface;
 using Microsoft.Surface.Presentation;
 using Microsoft.Surface.Presentation.Controls;
 using Microsoft.Surface.Presentation.Input;
+using System.Windows.Media.Animation;
 
 namespace EugeniePlusPlusWizard
 {
@@ -98,6 +99,35 @@ namespace EugeniePlusPlusWizard
         private void OnWindowUnavailable(object sender, EventArgs e)
         {
             //TODO: disable audio, animations here
+        }
+
+        private void ruledrop_PreviewTouchDown(object sender, TouchEventArgs e)
+        {
+            ColorAnimation animation = new ColorAnimation();
+            animation.From = Color.FromArgb(255, 0, 0, 128);
+            animation.To = Color.FromArgb(0, 0, 0, 128);
+            animation.Duration = new TimeSpan(0, 0, 2);
+
+            RuleAddedPulsar.Foreground = Brushes.Navy;
+            PropertyPath colorTargetPath = new PropertyPath("(Label.Foreground).(SolidColorBrush.Color)");
+            Storyboard story = new Storyboard();
+            Storyboard.SetTarget(animation, RuleAddedPulsar);
+            Storyboard.SetTargetProperty(animation, colorTargetPath);
+            story.Children.Add(animation);
+            story.Begin();
+            
+        }
+
+        private void ClearResults_PreviewTouchDown(object sender, TouchEventArgs e)
+        {
+            //update count if multiple devices ?
+            ResultBox1.Visibility = Visibility.Hidden;
+        }
+
+        private void generateResults_PreviewTouchDown(object sender, TouchEventArgs e)
+        {
+            //get appropriate ResultsBox for devices
+            ResultBox1.Visibility = Visibility.Visible;
         }
     }
 }

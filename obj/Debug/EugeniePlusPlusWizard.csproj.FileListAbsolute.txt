@@ -1,0 +1,16 @@
+C:\Users\Uppy\Documents\GitHub\EugeniePlusPlusWizard\EugeniePlusPlusWizard\bin\Debug\Resources\icon.png
+C:\Users\Uppy\Documents\GitHub\EugeniePlusPlusWizard\EugeniePlusPlusWizard\bin\Debug\EugeniePlusPlusWizard.xml
+C:\Users\Uppy\Documents\GitHub\EugeniePlusPlusWizard\EugeniePlusPlusWizard\bin\Debug\EugeniePlusPlusWizard.exe
+C:\Users\Uppy\Documents\GitHub\EugeniePlusPlusWizard\EugeniePlusPlusWizard\bin\Debug\EugeniePlusPlusWizard.pdb
+C:\Users\Uppy\Documents\GitHub\EugeniePlusPlusWizard\EugeniePlusPlusWizard\obj\Debug\EugeniePlusPlusWizard.csprojResolveAssemblyReference.cache
+C:\Users\Uppy\Documents\GitHub\EugeniePlusPlusWizard\EugeniePlusPlusWizard\obj\Debug\SurfaceWindow1.baml
+C:\Users\Uppy\Documents\GitHub\EugeniePlusPlusWizard\EugeniePlusPlusWizard\obj\Debug\App.baml
+C:\Users\Uppy\Documents\GitHub\EugeniePlusPlusWizard\EugeniePlusPlusWizard\obj\Debug\SurfaceWindow1.g.cs
+C:\Users\Uppy\Documents\GitHub\EugeniePlusPlusWizard\EugeniePlusPlusWizard\obj\Debug\App.g.cs
+C:\Users\Uppy\Documents\GitHub\EugeniePlusPlusWizard\EugeniePlusPlusWizard\obj\Debug\EugeniePlusPlusWizard_Content.g.cs
+C:\Users\Uppy\Documents\GitHub\EugeniePlusPlusWizard\EugeniePlusPlusWizard\obj\Debug\EugeniePlusPlusWizard_MarkupCompile.cache
+C:\Users\Uppy\Documents\GitHub\EugeniePlusPlusWizard\EugeniePlusPlusWizard\obj\Debug\EugeniePlusPlusWizard.g.resources
+C:\Users\Uppy\Documents\GitHub\EugeniePlusPlusWizard\EugeniePlusPlusWizard\obj\Debug\EugeniePlusPlusWizard.Properties.Resources.resources
+C:\Users\Uppy\Documents\GitHub\EugeniePlusPlusWizard\EugeniePlusPlusWizard\obj\Debug\EugeniePlusPlusWizard.csproj.GenerateResource.Cache
+C:\Users\Uppy\Documents\GitHub\EugeniePlusPlusWizard\EugeniePlusPlusWizard\obj\Debug\EugeniePlusPlusWizard.exe
+C:\Users\Uppy\Documents\GitHub\EugeniePlusPlusWizard\EugeniePlusPlusWizard\obj\Debug\EugeniePlusPlusWizard.pdb
