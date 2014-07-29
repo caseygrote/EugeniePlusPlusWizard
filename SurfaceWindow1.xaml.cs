@@ -24,6 +24,9 @@ namespace EugeniePlusPlusWizard
     /// </summary>
     public partial class SurfaceWindow1 : SurfaceWindow
     {
+
+
+
         /// <summary>
         /// Default constructor.
         /// </summary>
@@ -118,16 +121,45 @@ namespace EugeniePlusPlusWizard
             
         }
 
+        Boolean FirstTask = true;
+
         private void ClearResults_PreviewTouchDown(object sender, TouchEventArgs e)
         {
             //update count if multiple devices ?
-            ResultBox1.Visibility = Visibility.Hidden;
+            //ResultBox1.Visibility = Visibility.Hidden;
+
+            TaskA.Visibility = Visibility.Hidden;
+            TaskB.Visibility = Visibility.Hidden;
         }
 
         private void generateResults_PreviewTouchDown(object sender, TouchEventArgs e)
         {
-            //get appropriate ResultsBox for devices
-            ResultBox1.Visibility = Visibility.Visible;
+
+            //Alternates task results
+            if (FirstTask)
+            {
+                TaskA.Visibility = Visibility.Visible;
+                TaskB.Visibility = Visibility.Hidden;
+                FirstTask = false;
+            }
+            else
+            {
+                TaskA.Visibility = Visibility.Hidden;
+                TaskB.Visibility = Visibility.Visible;
+                FirstTask = true;
+            }
+        }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            Button b = sender as Button;
+            rulestxt.Text = rulestxt.Text+ "\n" + b.Content;
+            b.Background = Brushes.SlateGray;
+        }
+
+        private void button1_PreviewTouchDown(object sender, TouchEventArgs e)
+        {
+            rulestxt.Text = "//miniEugene code";
         }
     }
 }

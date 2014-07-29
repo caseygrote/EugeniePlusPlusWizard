@@ -3,8 +3,10 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:s="http://schemas.microsoft.com/surface/2008"
     Title="EugeniePlusPlusWizard" mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" Background="#E6000000" Height="1080" Width="1920">
-  <Grid Background="Navy">
+                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" Background="#E6000000" Height="1080" Width="2903">
+    <Grid Background="SlateGray">
+           
+        <Grid x:Name="AppGrid" Background="Navy" Width="1896" HorizontalAlignment="Right">
         <Grid.RowDefinitions>
             <RowDefinition Height="67*" />
             <RowDefinition Height="928*" />
@@ -17,7 +19,12 @@
         <Grid Grid.Row="1" Background="#FFDBDBFF" HorizontalAlignment="Left" Height="Auto" Name="ruledrop" Width="965" Margin="291,0,0,0" PreviewTouchDown="ruledrop_PreviewTouchDown">
             <Label  Content="Rules" FontSize="30" Foreground="Navy" Height="54" HorizontalAlignment="Left" Margin="10,10,0,0" Name="label2" VerticalAlignment="Top" Width="241" />
             <Label  Content="Rule Added" FontSize="60"  Height="110" HorizontalAlignment="Left" Margin="10,66,0,0" Name="RuleAddedPulsar" Foreground="#00000000"  VerticalAlignment="Top" Width="949" />
-        </Grid>
+                
+                <TextBlock  FontSize="15" Foreground="Navy" Height="740" HorizontalAlignment="Left" Margin="10,182,0,0" Name="rulestxt" VerticalAlignment="Top" Width="949" >
+                    //miniEugene code
+                </TextBlock>
+            <Button Content="Clear" FontSize="30" Foreground="Navy" Height="50" HorizontalAlignment="Left" Margin="718,6,0,0" Name="button1" VerticalAlignment="Top" Width="241" PreviewTouchDown="button1_PreviewTouchDown" />
+            </Grid>
         <Grid Grid.Row="1" Background="#FFDBDBFF" HorizontalAlignment="Left" Height="Auto" Name="results" Width="624" Margin="1262,0,0,0">
             <Label Content="Results" FontSize="30" Foreground="Navy" Height="54" HorizontalAlignment="Left" Margin="10,10,0,0" Name="label3" VerticalAlignment="Top" Width="241" />
 
@@ -25,15 +32,88 @@
                     PreviewTouchDown="ClearResults_PreviewTouchDown"/>
             <Button Content="Generate Results" Height="50" HorizontalAlignment="Left" Margin="130,10,0,0"  Name="generateResults" VerticalAlignment="Top" Width="241" FontSize="30" Foreground="Navy" 
                     PreviewTouchDown="generateResults_PreviewTouchDown"/>
-            <ListBox Visibility="Hidden" Background="#6CFFFFFF" Height="856" HorizontalAlignment="Left" Margin="10,66,0,0" Name="ResultBox1" VerticalAlignment="Top" Width="608">
-                <ListBoxItem HorizontalAlignment="Center" Height="200">
-                    <Image Source="/EugeniePlusPlusWizard;component/Resources/InverterResults/inverter1.png"></Image>
-                </ListBoxItem>
-                <ListBoxItem HorizontalAlignment="Center" Height="200">
-                    <Image Source="/EugeniePlusPlusWizard;component/Resources/InverterResults/inverter2.png"></Image>
-                </ListBoxItem>
-            </ListBox>
-        </Grid>
+                <Image Visibility="Hidden" Source="/EugeniePlusPlusWizard;component/Resources/TaskB.png" x:Name="TaskB"></Image>
+                <Image Visibility="Hidden" Source="/EugeniePlusPlusWizard;component/Resources/TaskA.png" x:Name="TaskA"></Image>
+
+
+            </Grid>
         <Label Content="Eugenie++" Height="57" HorizontalAlignment="Left" Margin="10,10,0,0" Name="label4" VerticalAlignment="Top" Width="1888" Foreground="White" FontSize="30" />
+    </Grid>
+        
+        <StackPanel Height="1029" HorizontalAlignment="Left" Margin="12,12,0,0" Name="stackPanel1" VerticalAlignment="Top" Width="302" >
+            <Label Content="Sub-Task A:Genetic Toggle Switch" Foreground="White" Height="auto"></Label>
+            <Label Content="contains" Foreground="White" Height="auto"></Label>
+            <Button Content="CONTAINS p1" Height="33" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="302" Click="button1_Click" />
+            <Button Content="CONTAINS p2" Height="33" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="302" Click="button1_Click" />
+            <Button Content="CONTAINS c1" Height="33" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="302" Click="button1_Click" />
+            <Button Content="CONTAINS c2" Height="33" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="302" Click="button1_Click" />
+            <Button Content="CONTAINS c3" Height="33" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="302" Click="button1_Click" />
+            <Label Content="represses" Foreground="White" Height="auto"></Label>
+            <Button Content="c1 REPRESSES p1" Height="33" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="302" Click="button1_Click" />
+            <Button Content="c2 REPRESSES p2" Height="33" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="302" Click="button1_Click" />
+            <Label Content="induces" Foreground="White" Height="auto"></Label>
+            <Button Content="p1 INDUCES c2" Height="33" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="302" Click="button1_Click" />
+            <Button Content="p1 INDUCES c2" Height="33" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="302" Click="button1_Click" />
+            <Label Content="direction" Foreground="White" Height="auto"></Label>
+            <Button Content="REVERSE p1" Height="33" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="302" Click="button1_Click" />
+            <Button Content="REVERSE c2" Height="33" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="302" Click="button1_Click" />
+            <Button Content="FORWARD p2" Height="33" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="302" Click="button1_Click" />
+            <Button Content="FORWARD c1" Height="33" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="302" Click="button1_Click" />
+            <Button Content="FORWARD c3" Height="33" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="302" Click="button1_Click" />
+            <Label Content="order" Foreground="White" Height="auto"></Label>
+            <Button Content="c2 BEFORE p1" Height="33" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="302" Click="button1_Click" />
+            <Button Content="p1 BEFORE p2" Height="33" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="302" Click="button1_Click" />
+            <Button Content="p2 BEFORE c1" Height="33" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="302" Click="button1_Click" />
+            <Button Content="c1 BEFORE c3" Height="33" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="302" Click="button1_Click" />
+
+
+
+
+        </StackPanel>
+        <StackPanel Height="1029" HorizontalAlignment="Left" Margin="320,12,0,0" Name="stackPanel2" VerticalAlignment="Top" Width="334" >
+            <Label Content="Sub-Task B:Genetic Inverter" Foreground="White" Height="auto"></Label>
+            <Label Content="contains" Foreground="White" Height="auto"></Label>
+            <Button Content="CONTAINS p1" Height="33" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="302" Click="button1_Click" />
+            <Button Content="CONTAINS p2" Height="33" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="302" Click="button1_Click" />
+            <Button Content="CONTAINS c1" Height="33" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="302" Click="button1_Click" />
+            <Button Content="CONTAINS c2" Height="33" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="302" Click="button1_Click" />
+            <Button Content="CONTAINS c3" Height="33" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="302" Click="button1_Click" />
+            <Button Content="CONTAINS r1" Height="33" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="302" Click="button1_Click" />
+            <Button Content="CONTAINS r2" Height="33" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="302" Click="button1_Click" />
+            <Button Content="CONTAINS r3" Height="33" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="302" Click="button1_Click" />
+            <Button Content="CONTAINS t1" Height="33" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="302" Click="button1_Click" />
+            <Button Content="CONTAINS t2" Height="33" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="302" Click="button1_Click" />
+            <Label Content="represses" Foreground="White" Height="auto"></Label>
+            <Button Content="c1 REPRESSES p2" Height="33" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="302" Click="button1_Click" />
+            <Label Content="direction" Foreground="White" Height="auto"></Label>
+            <Button Content="FORWARD p1" Height="33" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="302" Click="button1_Click" />
+            <Button Content="FORWARD p2" Height="33" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="302" Click="button1_Click" />
+            <Button Content="FORWARD c1" Height="33" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="302" Click="button1_Click" />
+            <Button Content="FORWARD c2" Height="33" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="302" Click="button1_Click" />
+            <Button Content="FORWARD c3" Height="33" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="302" Click="button1_Click" />
+            <Button Content="FORWARD r1" Height="33" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="302" Click="button1_Click" />
+            <Button Content="FORWARD r2" Height="33" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="302" Click="button1_Click" />
+            <Button Content="FORWARD r3" Height="33" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="302" Click="button1_Click" />
+            <Button Content="FORWARD t1" Height="33" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="302" Click="button1_Click" />
+            <Button Content="FORWARD t2" Height="33" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="302" Click="button1_Click" />
+        </StackPanel>
+        <StackPanel Height="989" HorizontalAlignment="Left" Margin="628,52,0,0" Name="stackPanel2point2" VerticalAlignment="Top" Width="351" >
+            
+            <Label Content="order" Foreground="White" Height="auto"></Label>
+            <Button Content="p1 BEFORE r1" Height="33" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="302" Click="button1_Click" />
+            <Button Content="r1 BEFORE c1" Height="33" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="302" Click="button1_Click" />
+            <Button Content="c1 BEFORE r2" Height="33" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="302" Click="button1_Click" />
+            <Button Content="r2 BEFORE c2" Height="33" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="302" Click="button1_Click" />
+            <Button Content="c2 BEFORE t1" Height="33" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="302" Click="button1_Click" />
+            <Button Content="t1 BEFORE p2" Height="33" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="302" Click="button1_Click" />
+            <Button Content="p2 BEFORE r3" Height="33" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="302" Click="button1_Click" />
+            <Button Content="r3 BEFORE c3" Height="33" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="302" Click="button1_Click" />
+            <Button Content="c3 BEFORE t2" Height="33" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="302" Click="button1_Click" />
+
+
+
+
+        </StackPanel>
+
     </Grid>
 </s:SurfaceWindow>

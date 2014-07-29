@@ -100,6 +100,8 @@
     <Content Include="EugeniePlusPlusWizard.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Resource Include="Resources\taskA.png" />
+    <Resource Include="Resources\TaskB.png" />
     <Resource Include="Resources\InverterResults\inverter1.png" />
     <Resource Include="Resources\InverterResults\inverter2.png" />
   </ItemGroup>
